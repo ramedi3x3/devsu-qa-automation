@@ -1,0 +1,27 @@
+conclusiones - idemar rojas - junio 2026
+
+saucedemo:
+
+el sitio esta bien para practicar porque los elementos tienen data-test definidos,
+no tuve que buscar selectores raros. el flujo de compra es sencillo: login,
+agregar 2 productos, checkout y confirmacion.
+
+lo que me llamo la atencion es que tiene varios tipos de usuarios como locked_out_user
+y problem_user que simulan errores. no los cubri en este ejercicio pero en un
+proyecto real si los incluiria.
+
+una cosa que vi: al principio estaba repitiendo el login en cada test, despues
+lo movi al beforeEach para no repetir codigo. ese tipo de cosas se aprenden
+haciendo.
+
+petstore api:
+
+la api es publica y la usa mucha gente, asi que los datos que creas pueden
+desaparecer o cambiar. use Date.now() como id para evitar colisiones.
+
+cubri el ciclo basico: crear, buscar, actualizar y verificar por status.
+algo que encontre: la api acepta PUT con un ID que no existe y responde 200,
+eso en produccion seria un bug a reportar.
+
+en general prefiero cypress para esto porque puedo mezclar pruebas de ui
+y api en el mismo proyecto sin instalar nada mas.
